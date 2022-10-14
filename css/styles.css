@@ -1,0 +1,263 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    background-color: #333333;
+    font-family: 'Inter', sans-serif;
+    font-size: 62.5%;
+}
+
+body
+{
+    min-height: 100vh;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: calc(100vw - 2rem);
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgb(40, 40, 40);
+}
+
+header .logo img
+{
+    height: 4rem;
+    margin-left: 3rem;
+}
+
+header .logo img:hover
+{
+    transition: 50ms ease-in-out;
+    filter: drop-shadow(0 0 2rem rgb(255 0 0 / 1));
+}
+
+header .header-container
+{
+    display: flex;
+    align-items: center;
+}
+
+header .header-container > a
+{
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding-right: 2rem;
+    text-decoration: none;
+}
+
+header .header-container > a:hover,
+header .icons a:hover
+{
+    transition: 100ms ease-in-out;
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 0.8rem rgb(255, 255, 255, 0.3));
+}
+
+header .icons
+{
+    width: 12rem;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2rem;
+}
+
+header .icons a
+{
+    height: 3rem;
+}
+
+header .icons span
+{
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.linkedin-icon
+{
+    background-image: url("../assets/icons/linkedin-icon.svg");
+}
+
+.twitter-icon
+{
+    background-image: url("../assets/icons/twitter-icon.svg")
+}
+
+.github-icon
+{
+    background-image: url("../assets/icons/github-icon.svg");
+}
+
+main
+{
+    padding: 0 4rem;
+    display: grid;
+    justify-content: center;
+}
+
+main .intro
+{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    font-weight: 400;
+    color: lightgray;
+}
+
+main .intro .logotype
+{
+    text-align: end;
+    padding-right: 6rem;
+}
+
+main .intro .logotype img
+{
+    min-width: 28rem;
+    max-width: 42rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+main .intro p:nth-child(1)
+{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+main .intro p:nth-child(2)
+{
+    font-size: 5.6rem;
+    font-weight: 700;
+    color: rgb(230, 230, 230);
+}
+
+main .intro p:nth-child(3)
+{
+    font-size: 4.2rem;
+    margin-bottom: 2rem;
+    color: rgb(160, 160, 160);
+}
+
+main .intro p:nth-child(4)
+{
+    width: 72%;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+main .intro span
+{
+    color: #FF0000;
+    font-weight: 600;
+}
+
+main .intro span:hover
+{
+    transition: 50ms ease-in-out;
+    filter: drop-shadow(0 0 2rem rgb(255 0 0 / 0.8));
+}
+
+main .about-me
+{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+    font-size: 2rem;
+}
+
+main .about-me h2
+{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 6rem;
+}
+
+main .about-me .education
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+main .about-me .education .university
+{
+    max-width: 50rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: justify;
+}
+
+main .about-me .education .university img
+{
+    height: 16rem;
+    margin: 0 auto 4rem;
+}
+
+main .about-me .education .online-platforms
+{
+    max-width: 50rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    text-align: justify;
+}
+
+main .about-me .education .platforms
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 16rem;
+}
+
+main .about-me .education .platforms img
+{
+    width: 90%;
+}
+
+main .about-me .education img:hover
+{
+    transition: 200ms ease-in-out;
+    transform: scale(1.02);
+}
+
+@keyframes pulse
+{
+    0%
+    {
+        filter: drop-shadow(0 0 0.8rem rgb(255 0 0 / 0.6));
+    }
+
+    50%
+    {
+        filter: drop-shadow(0 0 4rem rgb(255 0 0 / 0.8));
+        transform: scale(1.02);
+    }
+
+    100%
+    {
+        filter: drop-shadow(0 0 0.8rem rgb(255 0 0 / 0.6));
+    }
+}

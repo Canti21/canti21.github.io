@@ -1,0 +1,22 @@
+@media (max-width: 387px)
+{
+    header .header-icons-container
+    {
+        display: none;
+    }
+
+    header
+    {
+        justify-content: center;
+    }
+
+    header .logo img
+    {
+        margin: 0;
+    }
+
+    main
+    {
+        padding: 1rem;
+    }
+}
