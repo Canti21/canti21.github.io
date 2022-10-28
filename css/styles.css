@@ -6,7 +6,11 @@
 
 html
 {
-    background-color: #333333;
+    background-image: url("../assets/img/galaxy_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     font-family: 'Inter', sans-serif;
     font-size: 62.5%;
 }
@@ -42,13 +46,13 @@ header .logo img:hover
     filter: drop-shadow(0 0 2rem rgb(255 0 0 / 1));
 }
 
-header .header-container
+header .navbar
 {
     display: flex;
     align-items: center;
 }
 
-header .header-container > a
+header .navbar > a
 {
     color: white;
     font-size: 1.8rem;
@@ -57,7 +61,7 @@ header .header-container > a
     text-decoration: none;
 }
 
-header .header-container > a:hover,
+header .navbar > a:hover,
 header .icons a:hover
 {
     transition: 100ms ease-in-out;
@@ -103,6 +107,11 @@ header .icons span
     background-image: url("../assets/icons/github-icon.svg");
 }
 
+header .hamenu
+{
+    display: none;
+}
+
 main
 {
     padding: 0 4rem;
@@ -114,12 +123,22 @@ main .intro
 {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     justify-content: center;
     align-items: center;
     padding: 0 4rem;
     font-weight: 400;
     color: lightgray;
+}
+
+main .intro div:nth-child(1)
+{
+    max-width: 41rem;
+}
+
+main .intro .presentation
+{
+    max-width: 75rem;
 }
 
 main .intro .logotype
@@ -171,7 +190,7 @@ main .intro span
 
 main .intro span:hover
 {
-    transition: 50ms ease-in-out;
+    transition: 100ms ease-in-out;
     filter: drop-shadow(0 0 2rem rgb(255 0 0 / 0.8));
 }
 
@@ -247,17 +266,17 @@ main .about-me .education img:hover
 {
     0%
     {
-        filter: drop-shadow(0 0 0.8rem rgb(255 0 0 / 0.6));
+        filter: drop-shadow(0 0 0.8rem rgb(255 0 0 / 0.2));
     }
 
     50%
     {
-        filter: drop-shadow(0 0 4rem rgb(255 0 0 / 0.8));
+        filter: drop-shadow(0 0 4rem rgb(255 0 0 / 0.5));
         transform: scale(1.02);
     }
 
     100%
     {
-        filter: drop-shadow(0 0 0.8rem rgb(255 0 0 / 0.6));
+        filter: drop-shadow(0 0 0.8rem rgb(255 0 0 / 0.2));
     }
 }
