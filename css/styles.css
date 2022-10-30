@@ -6,19 +6,20 @@
 
 html
 {
-    background-color: black;
-    background-image: url("../assets/img/galaxy.jpg");  
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     font-family: 'Inter', sans-serif;
     font-size: 62.5%;
 }
 
 body
 {
+    background-color: black;
+    background-image: url("../assets/img/galaxy.jpg");  
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;   
     min-height: 100vh;
+    color: white;
 }
 
 header
@@ -37,8 +38,8 @@ header
 
 header .logo img
 {
-    height: 4rem;
-    margin-left: 3rem;
+    height: 3.2rem;
+    margin-left: 1rem;
 }
 
 header .logo img:hover
@@ -49,72 +50,23 @@ header .logo img:hover
 
 header .navbar
 {
+    display: none;
+}
+
+header .hamenu span
+{
     display: flex;
-    align-items: center;
-}
-
-header .navbar > a
-{
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 600;
-    padding-right: 2rem;
-    text-decoration: none;
-}
-
-header .navbar > a:hover,
-header .icons a:hover
-{
-    transition: 100ms ease-in-out;
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 0.8rem rgb(255, 255, 255, 0.3));
-}
-
-header .icons
-{
-    width: 12rem;
-    display: flex;
-    justify-content: space-between;
-    margin-right: 2rem;
-}
-
-header .icons a
-{
-    height: 3rem;
-}
-
-header .icons span
-{
-    display: inline-block;
     width: 3rem;
     height: 3rem;
-    background-size: cover;
+    background-image: url("../assets/icons/ham_icon.svg");
     background-position: center;
-    background-repeat: no-repeat;
-}
-
-.linkedin-icon
-{
-    background-image: url("../assets/icons/linkedin-icon.svg");
-}
-
-.twitter-icon
-{
-    background-image: url("../assets/icons/twitter-icon.svg")
-}
-
-.github-icon
-{
-    background-image: url("../assets/icons/github-icon.svg");
-}
-
-header .hamenu
-{
-    display: none;
+    background-size: cover;
+    cursor: pointer;
 }
 
 main
 {
+    margin-top: 1rem;
     padding: 0 4rem;
     display: grid;
     justify-content: center;
@@ -122,63 +74,48 @@ main
 
 main .intro
 {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
-    grid-template-columns: auto 1fr;
     justify-content: center;
     align-items: center;
-    padding: 0 4rem;
+    padding: 0 2rem;
     font-weight: 400;
     color: lightgray;
 }
 
-main .intro div:nth-child(1)
-{
-    max-width: 41rem;
-}
-
 main .intro .presentation
 {
-    max-width: 75rem;
+    width: calc(100vw - 4rem);
 }
 
 main .intro .logotype
 {
-    text-align: end;
-    padding-right: 6rem;
-}
-
-main .intro .logotype img
-{
-    min-width: 28rem;
-    max-width: 42rem;
-    animation: pulse 2s ease-in-out infinite;
+    display: none;
 }
 
 main .intro p:nth-child(1)
 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
 }
 
 main .intro p:nth-child(2)
 {
-    font-size: 5.6rem;
+    font-size: 4.2rem;
     font-weight: 700;
     color: rgb(230, 230, 230);
 }
 
 main .intro p:nth-child(3)
 {
-    font-size: 4.2rem;
+    font-size: 2.6rem;
     margin-bottom: 2rem;
     color: rgb(160, 160, 160);
 }
 
 main .intro p:nth-child(4)
 {
-    width: 72%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
     text-align: justify;
 }
@@ -197,34 +134,35 @@ main .intro span:hover
 
 main .about-me
 {
+    margin-top: 2rem;
     min-height: 100vh;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    color: white;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 main .about-me h2
 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 500;
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
 }
 
 main .about-me .education
 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 4rem;
+    padding: 1.6rem;
 }
 
 main .about-me .education .university
 {
-    max-width: 50rem;
+    width: 100%;
     display: grid;
     grid-template-rows: auto auto;
     text-align: justify;
@@ -232,8 +170,8 @@ main .about-me .education .university
 
 main .about-me .education .university img
 {
-    height: 16rem;
-    margin: 0 auto 4rem;
+    width: 80%;
+    margin: 0 auto 2rem;
 }
 
 main .about-me .education .online-platforms
@@ -250,6 +188,7 @@ main .about-me .education .platforms
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     align-items: center;
+    margin: 0 auto 2rem;
 }
 
 main .about-me .education .platforms img
@@ -261,6 +200,230 @@ main .about-me .education img:hover
 {
     transition: 200ms ease-in-out;
     transform: scale(1.02);
+}
+
+main .featured-projects
+{
+    display: grid;
+    align-items: center;
+    padding: 0 2rem 2rem;
+    min-height: 100vh;
+    width: calc(100% - 4rem);
+}
+
+main .featured-projects h2
+{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 2rem 0 4rem;
+}
+
+.featured-project
+{
+    background-color: rgba(61, 61, 61, 0.8);
+    border-radius: 1rem;
+    margin: 2.4rem 0;
+}
+
+.featured-project .fp-info
+{
+    padding: 0 1rem 1rem;
+}
+
+.featured-project .fp-info h3
+{
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+.featured-project .fp-info p
+{
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    text-align: justify;
+}
+
+.featured-project img
+{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.featured-project .fp-info .fp-links
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fp-links a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.fp-links a:hover
+{
+    transition: 200ms ease-in-out;
+    transform: scale(1.05);
+}
+
+.fp-links a .external-icon
+{
+    display: inline-block;
+    padding-left: 1rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url("../assets/icons/external-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: text-top;
+    filter: invert(99%) sepia(13%) saturate(2%) hue-rotate(150deg) brightness(112%) contrast(100%);
+}
+
+main .featured-projects .view-portfolio
+{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 1rem 2rem;
+}
+
+main .featured-projects .view-portfolio:hover
+{
+    transition: 100ms ease-in-out;
+    border: 2px solid white;
+    font-weight: bold;
+    background-color: rgba(61, 61, 61, 0.8);
+}
+
+main .contact-me
+{
+    padding: 2rem;
+}
+
+main .contact-me h2
+{
+    font-size: 3rem;
+    text-align: center;
+}
+
+main .contact-me p
+{
+    font-size: 1.6rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+main .contact-me .email-container
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+main .contact-me .email-container a
+{
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+main .contact-me a .email-icon
+{
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    background-image: url("../assets/icons/email-icon.svg");
+    filter: invert(99%) sepia(13%) saturate(2%) hue-rotate(150deg) brightness(112%) contrast(100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+footer
+{
+    font-size: 1.6rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: grid;
+    padding: 2rem;
+}
+
+footer .footer-links
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-links .site-content,
+footer .footer-links .external-links
+{
+    padding: 1rem 0;
+}
+
+footer .footer-links .site-content ul,
+footer .footer-links .external-links ul
+{
+    list-style-type: none;
+}
+
+footer .footer-links .site-content li,
+footer .footer-links .external-links li
+{
+    padding: 0.6rem 0;
+}
+
+footer .footer-links .site-content a,
+footer .footer-links .external-links a
+{
+    text-decoration: none;
+    color: lightgray;
+}
+
+footer .footer-links .external-links
+{
+    text-align: right;
+}
+
+footer .footer-links .external-links a span
+{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-right: 1rem;
+    vertical-align: text-top;
+}
+
+footer .footer-links .external-links .github-icon
+{
+    background-image: url("../assets/icons/github-icon.svg");
+}
+
+footer .footer-links .external-links .twitter-icon
+{
+    background-image: url("../assets/icons/twitter-icon.svg");
+}
+
+footer .footer-links .external-links .linkedin-icon
+{
+    background-image: url("../assets/icons/linkedin-icon.svg");
+}
+
+footer .copyright
+{
+    text-align: center;
+    padding: 1rem 0;
 }
 
 @keyframes pulse
